@@ -1,0 +1,38 @@
+/*1. tac dung lên selector khi nhấn giữ chuột*/
+.di chuot:active{
+    color: aliceblue;
+}
+/*2.tác dụng lên selector khi chua lick vào truy cập*/
+.cick_me:link{
+    color: aliceblue;
+}
+/*3.tác dụng lên seclector khi đã lick vào truy cập*/
+.cick_me:visited{
+    color: aqua;
+}
+/*.thẻ con thứ n */
+p:nth-child(2){
+}
+/*.thẻ con cuối  cùng*/
+p:last-child{
+}
+/*.thẻ con đầu*/
+p:first-child{
+}
+/*.thẻ con số lẻ*/
+p:nth-child(even){
+}
+/*.thẻ con số chẳn*/
+p:nth-child(odd){
+}
+/*.thẻ con tính từ dưới lên*/
+p:nth-last-child(2){
+}
+/*.thẻ con duy nhất*/
+p:only-child{
+}
+
+
+/*các phần tử có class là top ,trừ thẻ p*/
+.top:not(p){
+}

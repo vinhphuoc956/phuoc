@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Dropdown</title>
+    <link rel="stylesheet" href="wedphim.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="webphim.js"></script>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            width: 219vh;
+        }
+
+        .menu {
+            background-color: #1a1a1a;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .menu-item {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .menu-item:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            padding: 10px;
+            top: 100%;
+            left: 0;
+            min-width: 180px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: absolute;
+            z-index: 1;
+          
+        }
+
+        .dropdown a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 8px;
+        }
+
+        .dropdown a:hover {
+            background-color: #444;
+        }
+
+        .menu span:hover{
+            color: rgba(0, 149, 255, 0.881);
+        }
+        .nav-1{
+            background-color:rgba(0, 149, 255, 0.881);
+            padding: 20px 15px;
+            width: 97.1%;
+            overflow-x: hidden;
+            margin-top: -8px;
+        }
+        .nav-1{
+            text-align: right;
+            margin-right: 40px;
+        }
+        .nav-1 button{
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .nav-1 button:hover{
+            color: rgb(0, 171, 250);
+        }
+        .nav-2{
+            text-align: left;
+            transform: translateY(-30px);
+        }
+        .nav-2 span{
+            padding: 10px;
+            font-size: 10px;
+        }
+        .menu-item input:hover{
+            box-shadow: 2px 3px 2px rgb(155, 164, 167);
+            border-radius: 5px;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+<div class="nav-1">
+    <a href="https://cdnjs.com/libraries/font-awesome"><button>ĐĂNG NHẬP</button></a>
+    <a href=""><button>ĐĂNG KÝ</button></a>
+</div>
+<div class="nav-2">
+    <span><i class="fas fa-phone-alt"></i> (08) 38.000.000</span>
+    <span><i class="fas fa-envelope"></i> <a href="mailto:customer@mysite.com">customer@mysite.com</a></span>
+    <span><i class="fab fa-yahoo"></i> myYahoo</span>
+    <span><i class="fab fa-skype"></i> mySkype</span>
+    <span><i class="fab fa-viber"></i> myViber</span>
+</div>
+    <nav class="menu">
+        <div class="menu-item">
+            <span style="color: rgba(0, 149, 255, 0.881) ;">QUỐC GIA ▼</span>
+            <div class="dropdown">
+                <a href="#">Hàn Quốc</a>
+                <a href="#">Thái Lan</a>
+                <a href="#">Đài Loan</a>
+                <a href="#">Argentina</a>
+                <a href="#">Bahamas</a>
+                <a href="#">Áo</a>
+                <a href="#">Canada</a>
+                <a href="#">Pháp</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <span>THỂ LOẠI ▼</span>
+            <div class="dropdown">
+                <a href="#">Hàn Quốc</a>
+                <a href="#">Thái Lan</a>
+                <a href="#">Đài Loan</a>
+                <a href="#">Argentina</a>
+                <a href="#">Bahamas</a>
+                <a href="#">Áo</a>
+                <a href="#">Canada</a>
+                <a href="#">Pháp</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <span>PHIM BỘ</span>
+        </div>
+        <div class="menu-item">
+            <span>SẮP CHIẾU</span>
+        </div>
+        <div class="menu-item">
+            <span>TRANG CHỦ</span>
+        </div>
+        <div class="menu-item">
+            <span><input type="text" placeholder="Tìm Kiếm"></span>
+        </div>
+    </nav>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide"><img src="static/image/anh6.jpg" alt="Slide 1"></div>
+            <div class="slide"><img src="static/image/anh8.jpg" alt="Slide 2"></div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+
+
+
+   
+    <!-- thân bài-->
+        <div class="container">
+            <h2>PHIM ĐỀ XUẤT</h2>
+            <div class="slider-container">
+                <button class="slider-btn prev" onclick="scrollSlider(-300)">&lt;</button>
+                <div class="movie-slider" id="movieSlider">
+                    <div class="movie">
+                        <img src="static/image/anh11.jpg" alt="Movie 1">
+                        <div class="info">
+                            <p>Cô Nàng Nghiện Làm</p>
+                        </div>
+                    </div>
+                    <div class="movie">
+                        <img src="static/image/anh13.jpg" alt="Movie 2">
+                        <div class="info">
+                            <p>Kamono Hashi Ron</p>
+                        </div>
+                    </div>
+                    <div class="movie">
+                        <img src="static/image/anh7.jpg" alt="Movie 3">
+                        <div class="info">
+                            <p>Ngọn Núi 2</p>
+                        </div>
+                    </div>
+                    <div class="movie">
+                        <img src="static/image/anh14.png" alt="Movie 4">
+                        <div class="info">
+                            <p>Thế Giới Tương Lai</p>
+                        </div>
+                    </div>
+                    <div class="movie">
+                        <img src="static/image/anh16.jpg" alt="Movie 4">
+                        <div class="info">
+                            <p>Thế Giới Tương Lai</p>
+                        </div>
+                    </div>
+                    <div class="movie">
+                        <img src="static/image/anh15.jpg.crdownload" alt="Movie 4">
+                        <div class="info">
+                            <p>Thế Giới Tương Lai</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn next" onclick="scrollSlider(300)">&gt;</button>
+            </div>
+        </div>
+
+
+
+
+
+    
+</body>
+</html>
